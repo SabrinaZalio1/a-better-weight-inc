@@ -10,6 +10,15 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+:root {
+  --primary-color: #DD71C6;
+  --secondary-color: #FFD900;
+  --tertiary-color: #0083D3;
+  --text-color: #333;
+  --bg-one: #F9F9F9;
+  --light-color: #fff;
+}
+
 /* breakpoints: (
   xs: 0,
   sm: 576px,
@@ -23,17 +32,17 @@
 .primary-button {
   width: 215px;
   height: 40px;
-  color: #fff;
+  color: var(--light-color);
   border: none;
   cursor: pointer;
-  background-color: #DD71C6;
+  background-color: var(--primary-color);
 }
 
 .primary-title {
   font-family: 'Libre Baskerville', serif;
   font-size: 30px;
   font-weight: 400;
-  color: #333;
+  color: var(--text-color);
   max-width: 450px;
   text-align: center;
 }
@@ -42,14 +51,13 @@
   font-family: 'Libre Baskerville', serif;
   font-size: 24px;
   font-weight: 400;
-  color: #333;
-  text-align: center;
+  color: var(--text-color);
 }
 
 .tertiary-title {
   font-size: 18px;
   font-weight: 400;
-  color: #0083D3;
+  color: var(--tertiary-color);
   text-align: center;
   padding-bottom: 25px;
   border-bottom: 1px solid #B1E2FF;
@@ -57,15 +65,15 @@
 }
 
 .c-pink {
-  color: #DD71C6;
+  color: var(--primary-color);
 }
 
 .c-border-pink {
-  border-bottom: 1px solid #DD71C6;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .c-bg-yellow {
-  background: #FFD900;
+  background: var(--secondary-color);
 }
 
 @media only screen and (min-width: 1200px) {
@@ -81,11 +89,9 @@
 /* END GENERAL SYLES */
 
 
-
-
 /* HEADER */
 header {
-  background-color: #F9F9F9;
+  background-color: var(--bg-one);
 }
 
 header li {
@@ -109,7 +115,7 @@ a {
 }
 
 .header__yellow-bg {
-  background-color: #FFD900;
+  background-color: var(--secondary-color);
   height: 100%;
   width: 50%;
   position: absolute;
@@ -140,7 +146,7 @@ a {
 }
 
 .nav-link:hover {
-  color: #DD71C6;
+  color: var(--primary-color);
 }
 
 .hamburger {
@@ -155,7 +161,7 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background-color: #DD71C6;
+  background-color: var(--primary-color);
 }
 
 /* DROPDOWN CODE */
@@ -172,9 +178,8 @@ a {
   transition: 0.3s ease-out;
 }
 
-
 .link:hover {
-  color: #DD71C6;
+  color: var(--primary-color);
 }
 
 .dropdown.active>.link {
@@ -189,7 +194,7 @@ a {
   position: absolute;
   left: 0;
   top: calc(100% + .25rem);
-  background-color: white;
+  background-color: var(--light-color);
   padding: .75rem;
   border-radius: .25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
@@ -208,11 +213,11 @@ a {
   text-decoration: none;
 }
 
-/* .dropdown.active>.link+.dropdown-menu {
+.dropdown.active>.link+.dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-} */
+}
 
 @media only screen and (min-width: 992px) {
   .header__yellow-bg {
@@ -238,7 +243,7 @@ a {
     display: block;
   }
 
-  /* .hamburger.active .bar:nth-child(2) {
+  .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
 
@@ -248,7 +253,7 @@ a {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  } */
+  }
 
   .nav-menu {
     position: fixed;
@@ -256,7 +261,7 @@ a {
     top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color: #F9F9F9;
+    background-color: var(--bg-one);
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -280,16 +285,10 @@ a {
 /* END HEADER */
 
 
-
-
-
-
-
-
 /* CHICAGO FREE MEDICAL CHECKUP SECTION */
 
 .free-medical-checkup {
-  background: #F9F9F9;
+  background: var(--bg-one);
   display: flex;
   flex-direction: column;
   padding: 50px 0;
@@ -315,7 +314,7 @@ a {
 }
 
 .free-medical-checkup__description {
-  color: #333;
+  color: var(--text-color);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -324,18 +323,17 @@ a {
 }
 
 .free-medical-checkup__yellow-bg {
-  background-color: #FFD900;
+  background-color: var(--secondary-color);
   height: 100%;
   width: 50%;
   position: absolute;
   right: 0;
   top: 0;
-  /* border-top-left-radius: 80px 80px; */
 }
 
 .circle10 {
   border-radius: 50%;
-  border: 20px solid #FFF;
+  border: 20px solid var(--light-color);
   width: 280px;
   height: 280px;
   position: absolute;
@@ -379,7 +377,7 @@ a {
 }
 
 .countdown-item-text {
-  color: #0083D3;
+  color: var(--tertiary-color);
   font-size: 8px;
   letter-spacing: 3px;
   margin-bottom: 20px;
@@ -391,6 +389,7 @@ a {
 }
 
 /* end countdown */
+
 @media only screen and (min-width: 992px) {
   .primary-title {
     text-align: left;
@@ -433,7 +432,7 @@ a {
 
   .circle9 {
     border-radius: 50%;
-    border: 20px solid #FFF;
+    border: 20px solid var(--light-color);
     width: 360px;
     height: 360px;
     position: absolute;
@@ -478,11 +477,6 @@ a {
 /* END OF CHICAGO FREE MEDICAL CHECKUP SECTION */
 
 
-
-
-
-
-
 /* INFORMATION SECTION */
 .information {
   display: flex;
@@ -490,7 +484,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 60px;
-  background-color: #DD71C6;
+  background-color: var(--primary-color);
   padding: 30px 0;
   position: relative;
 }
@@ -504,14 +498,9 @@ a {
 }
 
 .information__card {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: space-evenly; */
   width: 135px;
   height: 158px;
-  background-color: #fff;
+  background-color: var(--light-color);
   border-radius: 20px;
   padding-top: 15px;
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.03);
@@ -548,7 +537,7 @@ a {
 
 .circle8 {
   border-radius: 50%;
-  border: 28px solid #FFF;
+  border: 28px solid var(--light-color);
   width: 180px;
   height: 180px;
   position: absolute;
@@ -617,10 +606,8 @@ a {
 /* END OF INFORMATION SECTION */
 
 
-
-
-
 /* WHO IS THE CONSULTATION FOR SECTION */
+
 .consultation-for {
   display: flex;
   justify-content: center;
@@ -633,7 +620,7 @@ a {
 
 .consultation-for__title,
 .consultation-for__description {
-  color: #fff;
+  color: var(--light-color);
   text-align: left;
 }
 
@@ -666,14 +653,14 @@ a {
 }
 
 .consultation-for__img-border {
-  border: 28px solid #fff;
+  border: 28px solid var(--light-color);
   border-radius: 50%;
   width: 400px;
   height: 400px;
 }
 
 .consultation-for__img-border2 {
-  border-bottom: 28px solid #fff;
+  border-bottom: 28px solid var(--light-color);
   border-radius: 50%;
   width: 400px;
   height: 400px;
@@ -683,7 +670,7 @@ a {
 }
 
 .circle1 {
-  border: 18px solid #fff;
+  border: 18px solid var(--light-color);
   border-radius: 50%;
   width: 85px;
   height: 85px;
@@ -692,9 +679,7 @@ a {
   right: 15%;
 }
 
-
 @media only screen and (max-width: 992px) {
-
   .m-auto {
     margin: auto;
   }
@@ -712,13 +697,13 @@ a {
   }
 
   .circle1 {
-    border: 28px solid #fff;
+    border: 28px solid var(--light-color);
     top: 80px;
   }
 
   .circle2 {
     border-radius: 50%;
-    border: 28px solid #FFF;
+    border: 28px solid var(--light-color);
     opacity: 0.15;
     width: 419px;
     height: 495px;
@@ -729,7 +714,7 @@ a {
 
   .circle3 {
     border-radius: 50%;
-    border: 28px solid #FFF;
+    border: 28px solid var(--light-color);
     width: 229px;
     height: 225px;
     position: absolute;
@@ -753,9 +738,8 @@ a {
 /* END OF WHO IS THE CONSULTATION FOR SECTION */
 
 
-
-
 /* WE CAN HELP YOU SECTION */
+
 .help-you {
   padding-top: 60px;
   position: relative;
@@ -788,7 +772,7 @@ a {
 
 .circle4 {
   border-radius: 50%;
-  border: 28px solid #F9F9F9;
+  border: 28px solid var(--bg-one);
   width: 280px;
   height: 300px;
   position: absolute;
@@ -800,6 +784,7 @@ a {
 @media only screen and (min-width: 992px) {}
 
 @media only screen and (min-width: 1200px) {
+
   .help-you {
     height: 795;
     text-align: center;
@@ -829,8 +814,9 @@ a {
 
 
 /* FREE CONSULTATION SECTION */
+
 .free-consultation {
-  background: #F9F9F9;
+  background: var(--bg-one);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -839,7 +825,7 @@ a {
 }
 
 .free-consultation__enhance-text {
-  color: #DD71C6;
+  color: var(--primary-color);
 }
 
 .free-consultation__container {
@@ -854,7 +840,7 @@ a {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  background: #FFF;
+  background: var(--light-color);
   padding: 30px;
   width: 290px;
   height: 300px;
@@ -872,7 +858,7 @@ a {
 
 .circle5 {
   border-radius: 50%;
-  border: 20px solid #fff;
+  border: 20px solid var(--light-color);
   width: 280px;
   height: 300px;
   position: absolute;
@@ -882,7 +868,7 @@ a {
 
 .circle6 {
   border-radius: 50%;
-  border: 20px solid #fff;
+  border: 20px solid var(--light-color);
   width: 200px;
   height: 200px;
   position: absolute;
@@ -892,7 +878,7 @@ a {
 
 .circle7 {
   border-radius: 50%;
-  border: 20px solid #fff;
+  border: 20px solid var(--light-color);
   width: 150px;
   height: 150px;
   position: absolute;
@@ -922,11 +908,60 @@ a {
 /* END OF FREE CONSULTATION SECTION */
 
 
+/* FAQ */
 
+.faqs {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faqs__title-container {
+  margin: 50px 0;
+  width: 90%;
+  text-align: left;
+}
+
+.faq {
+  max-width: 90%;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  background: var(--bg-one);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1.5s ease;
+}
+
+.faq.active .answer {
+  max-height: 500px;
+  padding: 20px;
+  border-top: 4px solid var(--light-color);
+  line-height: 24px;
+}
+
+.faq.active img {
+  transform: rotate(180deg);
+}
+
+
+/* END OF FAQ */
 
 /* FOOTER */
 .footer {
-  background-color: #F9F9F9;
+  background-color: var(--bg-one);
 }
 
 .footer-container {
@@ -950,9 +985,31 @@ a {
 }
 
 .footer__links-title {
-  color: #333;
+  color: var(--text-color);
   font-family: 'Libre Baskerville', serif;
   font-size: 24px;
+}
+
+.footer__links li a {
+  display: inline-block;
+  position: relative;
+}
+
+.footer__links li a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary-color);
+  transform-origin: bottom top;
+  transition: transform 0.3s ease-out;
+}
+
+.footer__links li a:hover:after {
+  transform: scaleX(1);
 }
 
 .footer__links {
@@ -993,6 +1050,15 @@ a {
 .footer__social-media-container {
   display: flex;
   gap: 20px;
+}
+
+.footer__social-media-icon {
+  transition: transform 0.3s ease;
+}
+
+.footer__social-media-icon:hover {
+  transform: translateY(-8px);
+  transition: all 0.3s ease;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1040,7 +1106,7 @@ a {
 
 @media only screen and (min-width: 1200px) {
   .footer-container {
-    width: 1300px;
+    width: 1200px;
   }
 }
 

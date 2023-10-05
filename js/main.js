@@ -1,4 +1,5 @@
 // COUNTDOWN
+
 function handleCountdown() {
   const endDate = new Date('2023-10-12 00:00:00').getTime();
   const now = new Date().getTime();
@@ -28,29 +29,24 @@ window.onload = startCountdown;
 
 
 
-// RESPONSIVE NAVBAR AND HAMBURGUER MENU
+// RESPONSIVE NAVBAR AND HAMBURGER MENU
 
-// Constants
 const hamburgerButton = document.querySelector(".hamburger");
 const navLinksContainer = document.querySelector(".nav-menu");
 
-// Toggle the menu and hamburger button
 function toggleMenu() {
   hamburgerButton.classList.toggle("active");
   navLinksContainer.classList.toggle("active");
 }
 
-// Toggle menu on hamburger button click
 hamburgerButton.addEventListener("click", toggleMenu);
 
-// Toggle menu on nav link click (using event delegation)
 navLinksContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("nav-link")) {
     toggleMenu();
   }
 });
 
-// Dropdown functionality
 document.addEventListener("click", (e) => {
   const dropdownButton = e.target.closest("[data-dropdown-button]");
   const dropdown = e.target.closest("[data-dropdown]");
@@ -74,29 +70,42 @@ document.addEventListener("click", (e) => {
 
 const numberElements = document.querySelectorAll('.hero-banner-number');
 
-// Function to animate a number element
 function animateNumber(element) {
   const initialValue = parseFloat(element.textContent);
   const targetValue = parseFloat(element.getAttribute('data-count'));
-  const duration = 2000; // Animation duration in milliseconds
+  const duration = 2000;
   const startTime = performance.now();
 
   function updateNumber(timestamp) {
     const elapsedTime = timestamp - startTime;
     if (elapsedTime < duration) {
-      // Calculate the current value based on elapsed time and target value
       const currentValue = initialValue + (targetValue - initialValue) * (elapsedTime / duration);
       element.textContent = Math.floor(currentValue);
       requestAnimationFrame(updateNumber);
     } else {
-      // Animation complete, set the final value
       element.textContent = Math.floor(targetValue);
     }
   }
-
-  // Start the animation
   requestAnimationFrame(updateNumber);
 }
 
-// Apply animation to each number element
 numberElements.forEach(animateNumber);
+
+
+// FAQ ACCORDION
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach(faq => {
+  faq.addEventListener('click', () => {
+    // Toggle the 'active' class on the clicked question
+    faq.classList.toggle('active');
+
+    // Hide the answers of all other questions
+    faqs.forEach(otherFaq => {
+      if (otherFaq !== faq) {
+        otherFaq.classList.remove('active');
+      }
+    });
+  });
+});
+
