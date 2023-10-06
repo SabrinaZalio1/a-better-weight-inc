@@ -13,6 +13,10 @@ In the main banner of the landing page there is a countdown feature
 
 https://github.com/SabrinaZalio1/a-better-weight-inc/assets/81325676/b0638878-e966-4d35-b934-e5e104c7d5e4
 
+Added a loader when entering the landing page to simulate loading the data or slow internet loading
+
+<img width="1074" alt="loader" src="https://github.com/SabrinaZalio1/a-better-weight-inc/assets/81325676/4bfef6b8-cc63-4e9b-9e99-9175e616994e">
+
 
 ## In the project directory, you can run:
 
