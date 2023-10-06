@@ -1,6 +1,7 @@
 # A Better Weight, Inc
 This project is a landing page and was developed with HTML, CSS and JavaScript
 
+Developed having the Mobile first design in mind and focusing in standar sizes of devices like mobile, tablet and desktop.
 
 ## About this project:
 
