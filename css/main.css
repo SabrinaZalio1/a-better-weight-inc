@@ -8,6 +8,7 @@
   font-size: 16px;
   color: #333333;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -36,6 +37,15 @@
   border: none;
   cursor: pointer;
   background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  -webkit-box-shadow: -4px 2px 39px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 2px 39px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px 2px 39px -13px rgba(0, 0, 0, 0.75);
 }
 
 .primary-title {
@@ -43,7 +53,7 @@
   font-size: 30px;
   font-weight: 400;
   color: var(--text-color);
-  max-width: 450px;
+  max-width: 345px;
   text-align: center;
 }
 
@@ -52,6 +62,7 @@
   font-size: 24px;
   font-weight: 400;
   color: var(--text-color);
+  margin: 20px 0;
 }
 
 .tertiary-title {
@@ -74,6 +85,16 @@
 
 .c-bg-yellow {
   background: var(--secondary-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .primary-title {
+    max-width: 450px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -407,6 +428,10 @@ a {
     max-width: 80%;
   }
 
+  .free-medical-checkup__promo {
+    display: none;
+  }
+
   .countdown {
     width: 500px;
     height: 170px;
@@ -456,6 +481,7 @@ a {
 
   .free-medical-checkup__banner {
     flex-direction: row;
+    gap: 120px;
   }
 
   .free-medical-checkup__container {
@@ -502,13 +528,20 @@ a {
   height: 158px;
   background-color: var(--light-color);
   border-radius: 20px;
-  padding-top: 15px;
+  padding: 15px 5px 0 5px;
+  transition: transform 0.3s ease;
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.03);
+}
+
+
+.information__card:hover {
+  transform: translateY(-8px);
+  transition: all 0.3s ease;
 }
 
 .information__card>div {
   width: 100%;
-  height: 70%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -560,6 +593,7 @@ a {
   .information__card {
     width: 145px;
     height: 215px;
+    padding: 15px 10px 0 10px;
   }
 
   .information__cards-container {
@@ -612,10 +646,12 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background: #73C3F4;
   padding: 35px;
   position: relative;
+  min-height: 1200px;
 }
 
 .consultation-for__title,
@@ -638,6 +674,7 @@ a {
   display: flex;
   gap: 35px;
   flex-direction: column;
+  margin-bottom: 120px;
 }
 
 .img-container {
@@ -689,6 +726,10 @@ a {
   .consultation-for {
     flex-direction: row;
     overflow: hidden;
+    height: 800px;
+    min-height: unset;
+    justify-content: center;
+    gap: 40px;
   }
 
   .consultation-for__description {
@@ -721,17 +762,25 @@ a {
     top: 110px;
     left: -7%;
   }
+
+  .consultation-for__text-section {
+    margin-bottom: unset;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .consultation-for {
     height: 800px;
     flex-direction: row;
-    gap: 80px;
+    gap: unset;
   }
 
   .consultation-for__description {
     max-width: 390px;
+  }
+
+  .img-container {
+    top: 60px;
   }
 }
 
@@ -842,12 +891,19 @@ a {
   border-radius: 20px;
   background: var(--light-color);
   padding: 30px;
-  width: 290px;
-  height: 300px;
+  /* width: 290px;
+  height: 300px; */
+  width: 75%;
+  max-width: 450px;
+  z-index: 10;
 }
 
 .free-consultation__card ul li {
-  margin: 14px 0;
+  margin: 30px 0;
+}
+
+.free-consultation__card-list {
+  padding: 0 20px;
 }
 
 .free-consultation__button-container {
@@ -873,7 +929,7 @@ a {
   height: 200px;
   position: absolute;
   top: 50px;
-  right: -10px;
+  right: -110px;
 }
 
 .circle7 {
@@ -895,6 +951,10 @@ a {
     width: 450px;
     height: 390px;
   }
+
+  .circle6 {
+    right: -10px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -911,7 +971,7 @@ a {
 /* FAQ */
 
 .faqs {
-  width: 80%;
+  width: 90%;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
@@ -926,7 +986,7 @@ a {
 
 .faq {
   max-width: 90%;
-  margin: 20px;
+  margin: 10px;
   cursor: pointer;
   border-radius: 20px;
   background: var(--bg-one);
@@ -956,6 +1016,16 @@ a {
   transform: rotate(180deg);
 }
 
+@media only screen and (min-width: 992px) {
+  .faqs {
+    width: 70%
+  }
+
+  .faq {
+    max-width: 90%;
+    margin: 20px;
+  }
+}
 
 /* END OF FAQ */
 
