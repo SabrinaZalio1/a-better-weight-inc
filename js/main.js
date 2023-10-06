@@ -97,10 +97,9 @@ const faqs = document.querySelectorAll('.faq');
 
 faqs.forEach(faq => {
   faq.addEventListener('click', () => {
-    // Toggle the 'active' class on the clicked question
     faq.classList.toggle('active');
 
-    // Hide the answers of all other questions
+    // Hides the answers of all other questions
     faqs.forEach(otherFaq => {
       if (otherFaq !== faq) {
         otherFaq.classList.remove('active');
@@ -109,3 +108,14 @@ faqs.forEach(faq => {
   });
 });
 
+// LOADER
+
+window.addEventListener("load", function () {
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("content").style.display = "none";
+
+  setTimeout(function () {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  }, 1000);
+});
